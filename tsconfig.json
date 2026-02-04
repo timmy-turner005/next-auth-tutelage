@@ -15,12 +15,17 @@
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
     // "plugins": [
     //   {
     //     "name": "next"
     //   }
     // ]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",

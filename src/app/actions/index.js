@@ -1,10 +1,12 @@
 "use server";
-import { signIn } from "@/auth";
+import { signIn, signOut } from "@/auth";
 
 export async function doSocialLogin(formData) {
   const action = formData.get("action");
-  await signIn(action, { callbackUrl: "/home" });
+  await signIn(action, { redirectTo: "/home" });
   console.log(action);
 }
 
-export async function doLogout() {}
+export async function doLogout() {
+  await signOut({ redirectTo: "/" });
+}
