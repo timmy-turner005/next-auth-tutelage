@@ -18,6 +18,7 @@ async function HomePage() {
         width={72}
         height={72}
         className="rounded-full"
+        loading="lazy"
       />
       <Logout />
     </div>
