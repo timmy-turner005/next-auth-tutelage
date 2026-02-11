@@ -1,5 +1,6 @@
 import React from "react";
 import LoginForm from "./components/LoginForm";
+import Link from "next/link";
 
 function Home() {
   return (
@@ -8,6 +9,10 @@ function Home() {
         Welcome to NextAuth.js! Time to Sign In
       </h1>
       <LoginForm />
+      <p className="my-3">
+        Dont have an account?
+        <Link className="mx-2 underline" href="/register"> Register</Link>
+      </p>
     </div>
   );
 }
